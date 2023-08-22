@@ -2,15 +2,16 @@
 <html>
     <head>
         {% if title %}
-        <title>{{ title }} - Microblog</title>
+        <title>{{ title }} - Headnote</title>
         {% else %}
-        <title>Welcome to Microblog</title>
+        <title>Welcome to Headnote</title>
         {% endif %}
     </head>
     <body>
         <div>
-            headnote:
+            Headnote:
             <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('explore') }}">Explore</a>
             {% if current_user.is_anonymous %}
             <a href="{{ url_for('login') }}">Login</a>
             {% else %}
@@ -29,5 +30,5 @@
         {% endif %}
         {% endwith %}
         {% block content %}{% endblock %}
-    </body>
+  </body>
 </html>
