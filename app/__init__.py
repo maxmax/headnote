@@ -22,6 +22,7 @@ mail = Mail(app)
 bootstrap = Bootstrap(app)
 moment = Moment(app)
 babel = Babel(app)
+#babel.init_app(app)
 
 if not app.debug:
     if app.config['MAIL_SERVER']:
